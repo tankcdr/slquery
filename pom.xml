@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+	<!-- parent pom -->
+    <groupId>madison.sumologic</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>11</maven.compiler.source>
+      <maven.compiler.target>11</maven.compiler.target>
+      <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
+      <maven-failsafe-plugin.version>2.22.1</maven-failsafe-plugin.version>
+      <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+      <junit-jupiter-engine.version>5.4.0</junit-jupiter-engine.version>
+      <hamcrest-all.version>2.2</hamcrest-all.version>
+      <lombok-plugin.version>1.18.12</lombok-plugin.version>
+    </properties>
+
+    <!-- sub modules -->
+    <modules>
+        <module>flowlog</module>
+    </modules>
+
+    <dependencies>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit-jupiter-engine.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>${hamcrest-all.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+  		  <groupId>org.projectlombok</groupId>
+    		<artifactId>lombok</artifactId>
+    		<version>${lombok-plugin.version}</version>
+    		<scope>provided</scope>
+      </dependency>
+    </dependencies>
+
+
+</project>
